@@ -1,0 +1,130 @@
+/*FILE: stylesheet.css*/
+/*PROJECT: Home Pager*/
+/*PROGRAMMER: Dario Simpson*/
+/*FIRST VERSION: 15-3-2024*/
+
+/*Do not touch anything else in this file unless you know what you are doing*/
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    color: #e5e9f0;
+
+    /*TO CHANGE THE BACKGROUND IMAGE, JUST RENAME THE IMAGE YOU WANT TO USE TO bg.png IN THE SAME DIRECTORY AS THE CURRENT ONE */
+    background-image: url('../bg.png'); /* Set the background image */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(43,42,51,0.6);
+    background-blend-mode: multiply;
+}
+
+/* Weather icon and information */
+#weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Fira Code', monospace;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#weather-info {
+    margin-right: 200px; 
+}
+
+#weather-info:hover,
+#weather-icon:hover {
+    filter: drop-shadow(0 0 10px rgba(236, 239, 244, 0.7));
+    transition: filter 0.3s ease;
+}
+
+
+/* Main title */
+.welcome-to-internet {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 550px;
+    max-width: calc(100% - 40px);
+    color: #e5e9f0;
+    font-family: 'Fira Code', monospace;
+    font-style: normal;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: none;
+}
+
+
+.welcome-to-internet:hover {
+    filter: drop-shadow(0 0 10px rgba(236, 239, 244, 1));
+    transition: filter 0.3s ease; /
+}
+
+
+/* Search box */
+#search-input {
+    position: absolute;
+    top: 150px; 
+    width: 700px; 
+    padding: 15px 20px; 
+    font-size: 16px;
+    border: none;
+    background-color: #2e3440;
+    color: #d8dee9;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    outline: none;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: box-shadow 0.3s ease;
+}
+
+#search-input:hover {
+    box-shadow: 0 0 10px 5px rgba(236, 239, 244, 0.5);
+}
+
+/* Links */
+.content {
+    display: flex;
+    margin-top: 150px;
+}
+
+.links {
+    font-family: 'Fira Code', monospace;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+a {
+    color: #e5e9f0;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+
+
+a:hover {
+    text-shadow: 0 0 10px #eceff4; 
+}
+
+
+
