@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-
+https://api.open-meteo.com/v1/forecast?latitude=43.4254&longitude=-80.5112&current=temperature_2m,is_day,precipitation,rain,snowfall,cloud_cover,wind_speed_10m&hourly=temperature_2m
 
 //
 // FUNCTION    : getWeatherFromUrl
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // RETURNS     : None
 //
 function getWeatherFromUrl() {
-    const apiUrl = 'https://api.open-meteo.com/v1/dwd-icon?latitude=43.4254&longitude=-80.5112&current=temperature_2m,precipitation,cloud_cover&hourly=temperature_2m';
+    const apiUrl = 'https://api.open-meteo.com/v1/forecast?latitude=43.4254&longitude=-80.5112&current=temperature_2m,is_day,precipitation,rain,snowfall,cloud_cover,wind_speed_10m&hourly=temperature_2m';
 
     // Fetch weather data from Open-Meteo API
     fetch(apiUrl)
@@ -57,9 +57,30 @@ function getWeatherFromUrl() {
             const temperature = openMeteoData.current.temperature_2m; // Current temperature
             const cloudCover = openMeteoData.current.cloud_cover; // Cloud cover
             const precipitation = openMeteoData.current.precipitation; // Precipitation amount
+            const isDay = openMeteoData.current.is_day; // is day or night
+            const rainMetter = openMeteoData.current.rain; // rain ammount in mm
+            const snowMetter = openMeteoData.current.snowfall; // snow ammount in cm
+            const windSpeed = openMeteoData.current.wind_speed_10m //
+
+            if(isDay){
+                time = "Day Time";
+                document.getElementById('weather-icon').innerHTML = `<img src="assets/clear-day.svg" alt="Clear Day Icon" style="height: auto; width: 200px;">`;
+
+            }else {
+                time = "Night time";
+            }
 
             const weatherInfo = document.getElementById('weather-info');
-            weatherInfo.innerHTML = `<div>${temperature}°C, Cloud Cover: ${cloudCover}%, Precipitation: ${precipitation}mm</div>`;
+            weatherInfo.innerHTML = `<div>Temperature: ${temperature}°C</div><div>Time: ${time}</div>`;
+            // weatherInfo.innerHTML = `<div>Temperature: ${temperature}°C</div><div>Precipitation: ${precipitation}mm</div><div>Cloud Cover: ${cloudCover}%</div><div>Time: ${time}%</div>`;
+            // weatherInfo.innerHTML = `<div>Temperature: ${temperature}°C</div>
+            //                          <div>Precipitation: ${precipitation}mm</div>
+            //                          <div>Cloud Cover: ${cloudCover}%</div>
+            //                          <div>Time: ${time}</div>
+            //                          <div>Rain: ${rainMetter}</div>
+            //                          <div>Snow: ${snowMetter}</div>
+            //                          <div>Wind Speed: ${windSpeed}</div>`;
+            //
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);

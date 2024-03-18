@@ -5,26 +5,47 @@
 
 /*Do not touch anything else in this file unless you know what you are doing*/
 
+/* Define @font-face for Fira Code Regular */
+@font-face {
+   font-family: 'Fira Code';
+   src: url('fonts/FiraCode-Regular.ttf') format('truetype');
+   font-weight: 400;
+}
+
+/* Define @font-face for Fira Code Medium */
+@font-face {
+   font-family: 'Fira Code';
+   src: url('fonts/FiraCode-Medium.ttf') format('truetype');
+   font-weight: 500;
+}
+
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    color: #e5e9f0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100vh;
+   margin: 0;
+   color: #e5e9f0;
 
-    /*TO CHANGE THE BACKGROUND IMAGE, JUST RENAME THE IMAGE YOU WANT TO USE TO bg.png IN THE SAME DIRECTORY AS THE CURRENT ONE */
-    background-image: url('../bg.png'); /* Set the background image */
+   /*TO CHANGE THE BACKGROUND IMAGE, JUST RENAME THE IMAGE YOU WANT TO USE TO bg.png IN THE SAME DIRECTORY AS THE CURRENT ONE */
+   background-image: url('../bg.png'); /* Set the background image */
 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(43,42,51,0.6);
-    background-blend-mode: multiply;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-color: rgba(43,42,51,0.6);
+   background-blend-mode: multiply;
 }
 
 /* Weather icon and information */
+#weather-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-right: 200px;
+}
+
 #weather-info {
     display: flex;
     flex-direction: column;
@@ -33,15 +54,6 @@ body {
     font-family: 'Fira Code', monospace;
 }
 
-#weather-icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-#weather-info {
-    margin-right: 200px; 
-}
 
 #weather-info:hover,
 #weather-icon:hover {
@@ -59,10 +71,10 @@ body {
     width: 550px;
     max-width: calc(100% - 40px);
     color: #e5e9f0;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code Medium', monospace; /* Change font family to Fira Code Medium */
     font-style: normal;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500; /* Set font weight to 500 for Medium */
     line-height: 1.2;
     letter-spacing: 0px;
     text-decoration: none;
@@ -80,9 +92,9 @@ body {
 /* Search box */
 #search-input {
     position: absolute;
-    top: 150px; 
-    width: 700px; 
-    padding: 15px 20px; 
+    top: 150px;
+    width: 700px;
+    padding: 15px 20px;
     font-size: 16px;
     border: none;
     background-color: #2e3440;
@@ -101,12 +113,16 @@ body {
 
 /* Links */
 .content {
-    display: flex;
-    margin-top: 150px;
+   display: flex;
+   align-items: flex-start; /* Align items at the start */
+   margin-top: 150px;
 }
 
+
+
+
 .links {
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code Medium', monospace; /* Change font family to Fira Code Medium */
 }
 
 ul {
@@ -123,8 +139,5 @@ a {
 
 
 a:hover {
-    text-shadow: 0 0 10px #eceff4; 
+    text-shadow: 0 0 10px #eceff4;
 }
-
-
-
