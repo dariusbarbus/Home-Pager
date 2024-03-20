@@ -58,13 +58,14 @@ function getWeatherFromUrl() {
             const cloudCover = openMeteoData.current.cloud_cover; // Cloud cover
             const precipitation = openMeteoData.current.precipitation; // Precipitation amount
             const isDay = openMeteoData.current.is_day; // is day or night
-            const rainMetter = openMeteoData.current.rain; // rain ammount in mm
-            const snowMetter = openMeteoData.current.snowfall; // snow ammount in cm
+            const rainMeter = openMeteoData.current.rain; // rain amount in mm
+            const snowMeter = openMeteoData.current.snowfall; // snow amount in cm
             const windSpeed = openMeteoData.current.wind_speed_10m //
 
             if(isDay){
                 time = "Day Time";
-                document.getElementById('weather-icon').innerHTML = `<img src="assets/clear-day.svg" alt="Clear Day Icon" style="height: auto; width: 200px;">`;
+                if(snowMetter)
+                document.getElementById('weather-icon').innerHTML = `<img src="assets/clear-day.svg" alt="Clear Day Icon" style="height: auto; width: 100px; margin-bottom: 15px">`;
 
             }else {
                 time = "Night time";
