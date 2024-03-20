@@ -60,13 +60,19 @@ function getWeatherFromUrl() {
             const isDay = openMeteoData.current.is_day; // is day or night
             const rainMeter = openMeteoData.current.rain; // rain amount in mm
             const snowMeter = openMeteoData.current.snowfall; // snow amount in cm
-            const windSpeed = openMeteoData.current.wind_speed_10m //
+            const windSpeed = openMeteoData.current.wind_speed_10m // wind speed
 
             if(isDay){
                 time = "Day Time";
-                if(snowMetter)
-                document.getElementById('weather-icon').innerHTML = `<img src="assets/clear-day.svg" alt="Clear Day Icon" style="height: auto; width: 100px; margin-bottom: 15px">`;
-
+                if(snowMeter > 0){
+                    document.getElementById('weather-icon').innerHTML = `<img src="assets/snowy-day.svg" alt="Snowy Day Icon" style="height: auto; width: 100px; margin-bottom: 15px">`;
+                }else if(rainMeter > 0){
+                    // INSERT ICON FOR RAINY DAY
+                }else if(cloudCover >= 25){
+                    document.getElementById('weather-icon').innerHTML = `<img src="assets/cloudy-day.svg" alt="Snowy Day Icon" style="height: auto; width: 100px; margin-bottom: 15px">`;
+                }else{
+                    document.getElementById('weather-icon').innerHTML = `<img src="assets/clear-day.svg" alt="Clear Day Icon" style="height: auto; width: 100px; margin-bottom: 15px">`;
+                }
             }else {
                 time = "Night time";
             }
