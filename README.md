@@ -1,6 +1,8 @@
 # Home Pager
 Home Pager is a minimalist html home page template where users can add their own links to have a personalized homepage.
 
+![img.png](src/assets/img/img3.png)
+
 ## Color Scheme
 It uses a slightly modified version of the [Nord Color Scheme](https://www.nordtheme.com/), and to match it there is a small collection of wallpapers included, most of which are part of the [ImageGoNord Project](https://ign.schrodinger-hat.it/) 
 
