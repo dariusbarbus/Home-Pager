@@ -1,7 +1,5 @@
-# 🚧THIS WIKI IS STILL UNDER CONSTRUCTION🚧
-
 # Home Pager
-Home Pager is a minimalist home page template where users can add their own links to have a personalized homepage.
+Home Pager is a minimalist html home page template where users can add their own links to have a personalized homepage.
 
 ## Color Scheme
 It uses a slightly modified version of the [Nord Color Scheme](https://www.nordtheme.com/), and to match it there is a small collection of wallpapers included, most of which are part of the [ImageGoNord Project](https://ign.schrodinger-hat.it/) 
@@ -84,6 +82,8 @@ To this
     </li>
 </ul>
 ```
+---
+
 ### Change the search engine
 To change search engine to DuckDuckGo or any other, find the `script.js` file. I have provided a few examples for the most common search engines.
 
@@ -137,4 +137,33 @@ function searchEngine(query) {
 }
 ```
 
+---
+
 ### Change the Weather
+To change the weather we need to go to this website: https://open-meteo.com/en/docs/#latitude=40.7143&longitude=-74.006&current=temperature_2m,is_day,precipitation,rain,snowfall,cloud_cover,wind_speed_10m
+Make sure the URL is extacly the same or it might not work.
+
+#### First Step
+There is going to be a search button in the first row, search for your location.
+
+![img.png](src/assets/img/img.png)
+
+#### Second Step
+Scroll down until you find a section that's called API Response.
+
+From here you are going to see a url, after the large graph, that starts with `api.open-meteo.com`. Copy the url because we are going to use it in the script.js file.
+
+![img.png](src/assets/img/img2.png)
+
+#### Third Step
+
+Go to the `script.js` file and fine the line that starts `const apiUrl`, it should be around line 47.
+
+It will have a url already in place for New York, you can replace the url in between `''`.
+
+**The url must be inside single quote marks `'url here'`**.
+
+---
+# Contributors
+
+This program is desgin and maintain by [Dario Simpson](https://github.com/dariusbarbus)
