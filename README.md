@@ -6,6 +6,9 @@ Home Pager is a minimalist home page template where users can add their own link
 ## Color Scheme
 It uses a slightly modified version of the [Nord Color Scheme](https://www.nordtheme.com/), and to match it there is a small collection of wallpapers included, most of which are part of the [ImageGoNord Project](https://ign.schrodinger-hat.it/) 
 
+## Icons
+The original Icons come from [weather-icons](https://github.com/Makin-Things/weather-icons) and where adapted to work here.
+
 ## Customization
 There are multiple options for customizing this, as a simple html template it can be transformed into anything.
 
