@@ -30,7 +30,7 @@ body {
    color: #e5e9f0;
 
    /*TO CHANGE THE BACKGROUND IMAGE, JUST RENAME THE IMAGE YOU WANT TO USE TO bg.png IN THE SAME DIRECTORY AS THE CURRENT ONE */
-   background-image: url('../bg.png'); /* Set the background image */
+   background-image: url('bg.png'); /* Set the background image */
 
    background-size: cover;
    background-repeat: no-repeat;
