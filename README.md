@@ -143,6 +143,7 @@ function searchEngine(query) {
 
 ### Change the Weather
 To change the weather we need to go to this website: https://open-meteo.com/en/docs/#latitude=40.7143&longitude=-74.006&current=temperature_2m,is_day,precipitation,rain,snowfall,cloud_cover,wind_speed_10m
+
 Make sure the URL is extacly the same or it might not work.
 
 #### First Step
